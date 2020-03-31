@@ -5,7 +5,7 @@ class LengthError(Exception):
 
 def polish_notation(user_list):
   assert user_list[0] in ["+", "-", "*", "/"], "Данной операции нет среди доступных!"
-  if int(user_list[1]) > 0 < int(user_list[2]):
+  if int(user_list[1]) >= 0 <= int(user_list[2]):
     try:
       if len(user_list) != 3:
         raise LengthError(len(user_list) - 1)
